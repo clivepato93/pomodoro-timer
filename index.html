@@ -12,8 +12,23 @@
   <main class="pomodoro">
     <h1>Pomodoro Timer</h1>
 
-    <section class="timer-display">
-      <span id="minutes">1</span>:<span id="seconds">00</span>
+    <section class="timer-display flex">
+      <div class="flex flex-col">
+      <button class="w-[1rem] border-2 minutes-plus"><img src="up-arrow-svgrepo-com.svg" alt="" srcset=""></button>
+      <span id="minutes">59</span>
+            <button class="w-[1rem]  border-2 minutes-minus"><img src="down-arrows-svgrepo-com.svg" alt="" srcset=""></button>
+
+      </div>
+     <div class="flex flex-col justify-center">
+        <div>:</div>
+     </div> 
+      <div class="flex flex-col">
+      <button class="w-[1rem]  border-2 seconds-plus"><img src="up-arrow-svgrepo-com.svg" alt="" srcset=""></button>
+      <span id="seconds">00</span>
+            <button class="w-[1rem]  border-2 seconds-minus"><img src="down-arrows-svgrepo-com.svg" alt="" srcset=""></button>
+
+      </div>
+      
     </section>
 
     <section class="controls">
@@ -28,5 +43,6 @@
       <button id="long-break" type="button">Long Break</button>
     </section>
   </main>
+
 </body>
 </html>

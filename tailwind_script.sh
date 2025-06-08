@@ -18,8 +18,15 @@ if [[ "${npm_version}" =~ [0-9] ]]; then
             echo "package_edit_script.js" >> .gitignore
             echo "tailwind_script.sh" >> .gitignore
     else
-        echo "error"
+        touch ".gitignore"
+        {
+            echo "\n" >> .gitignore
+            echo "node_modules/**" >> .gitignore
+            echo "package_edit_script.js" >> .gitignore
+            echo "tailwind_script.sh" >> .gitignore
+        }
     fi
 else
-    exit 'npm not installed'
+    echo 'npm not installed'
+    exit 1
 fi
